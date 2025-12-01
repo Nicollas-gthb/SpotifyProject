@@ -35,6 +35,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.25s;
+}
+
+.homeCircle:hover{
+    transform: scale(1.05);
+    background-color: rgb(46, 46, 46);
 }
 
 .searchCircle{
@@ -45,6 +51,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all, 0.25s;
 }
 
 .menuBox{
@@ -61,16 +68,40 @@ header{
     align-items: center;
     justify-content: center;
     border-radius: 50px;
+    transition: all, 0.25s;
+}
+
+.searchBox:focus-within{
+    outline: 2px solid white;
+}
+
+.searchBox:hover
+{
+    /*transform: scale(1.05);*/
+    background-color: rgb(46, 46, 46);
+    .searchCircle{
+        background-color: rgb(46, 46, 46);
+    }
+    .albumCircle{
+        background-color: rgb(46, 46, 46);
+    }
+    .inputSearch{
+        background-color: rgb(46, 46, 46);
+    }
+    
+}
+
+.inputSearch:hover{
+    background-color: rgb(46, 46, 46);
 }
 
 .inputSearch{
     background-color: rgb(31, 31, 31);
     color: rgb(255, 255, 255);
-    border-radius: 50px;
     height: 43px;
     width: 300px;
     border: none;
-
+    outline: none;
 }
 
 .albumCircle{
@@ -112,17 +143,33 @@ header{
     justify-content: center;
     align-items: center;
     font-size: 14px;
+    transition: all;
+}
+
+.premium:hover{
+    transform: scale(1.05);
+    background-color: rgb(215, 215, 215);
 }
 
 .instalar{
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    gap: 7px;
+    gap: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 30px;;
     width: 160px;
+    transition: all;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.instalar:hover{
+    transform: scale(1.05);
+    .inst{
+        color: rgb(215, 215, 215);
+    }
 }
 
 .inst{
@@ -130,6 +177,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 5px;
 }
 
 .outrosIcones{
