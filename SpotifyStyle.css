@@ -3,6 +3,8 @@
 body{
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
+    height: 100vh;
+    overflow: hidden;
 }
 
 a{
@@ -14,6 +16,12 @@ header{
     display: flex;
     align-items: center;
     /*background-color: aliceblue;*/
+}
+
+main{
+    display: grid;
+    grid-template-columns: 310px 1fr 350px;
+    height: 100vh;
 }
 
 .logoCircle{
@@ -68,6 +76,7 @@ header{
     align-items: center;
     justify-content: center;
     border-radius: 50px;
+   
     transition: all, 0.25s;
 }
 
@@ -77,7 +86,6 @@ header{
 
 .searchBox:hover
 {
-    /*transform: scale(1.05);*/
     background-color: rgb(46, 46, 46);
     .searchCircle{
         background-color: rgb(46, 46, 46);
@@ -88,7 +96,6 @@ header{
     .inputSearch{
         background-color: rgb(46, 46, 46);
     }
-    
 }
 
 .inputSearch:hover{
@@ -99,7 +106,7 @@ header{
     background-color: rgb(31, 31, 31);
     color: rgb(255, 255, 255);
     height: 43px;
-    width: 300px;
+    width: 385px;
     border: none;
     outline: none;
 }
@@ -153,7 +160,6 @@ header{
 
 .instalar{
     background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
     gap: 5px;
     display: flex;
     align-items: center;
@@ -168,11 +174,12 @@ header{
 .instalar:hover{
     transform: scale(1.05);
     .inst{
-        color: rgb(215, 215, 215);
+        color: rgb(255, 255, 255);
     }
 }
 
 .inst{
+    color: rgb(205, 205, 205);
     height: 20px;
     display: flex;
     align-items: center;
@@ -180,14 +187,18 @@ header{
     padding-bottom: 5px;
 }
 
+.instimg{
+    width: 16px;
+    height: 16px;
+}
+
 .outrosIcones{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
     height: 45px;
-    width: px;
 }
 
 .conta{
@@ -199,4 +210,18 @@ header{
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-right: 5px;
 }
+
+.leftside{
+    background-color: rgb(255, 0, 0);
+}
+
+.middle{
+    background-color: rgb(0, 255, 0);
+}
+        
+.rightside{
+    background-color: rgb(0, 0, 255);
+}
+
