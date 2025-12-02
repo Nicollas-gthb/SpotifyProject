@@ -213,6 +213,14 @@ main{
     margin-right: 5px;
 }
 
+
+
+.coluna{
+    overflow-y: auto;
+    height: 100%;
+    padding: 20px;
+}
+
 .leftside{
     background-color: rgb(255, 0, 0);
 }
