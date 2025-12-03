@@ -21,12 +21,12 @@ header{
 main{
     display: grid;
     grid-template-columns: 310px 1fr 350px;
-    height: 80vh;
+    height: 77vh;
     
 }
 
 footer{
-    height: 90px;
+    height: 100px;
 }
 
 .logoCircle{
