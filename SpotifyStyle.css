@@ -26,7 +26,9 @@ main{
 }
 
 footer{
-    height: 100px;
+    display: grid;
+    height: 13vh;
+    margin-top: 10px;
 }
 
 .logoCircle{
@@ -245,6 +247,12 @@ footer{
     border-radius: 12px;
 }
 
+.cesquerda{}
+.cmeio{}
+.cdireita{}
+
+
+
 
 .playerfield{
     background-color: rgb(133, 13, 245);
@@ -256,8 +264,8 @@ footer{
 
 .corpoplayer{
     background-color: rgb(0, 0, 0);
-    height: 90%;
+    height: 100%;
     width: 100%;
-    border-radius: 12px;
-    margin-top: 8px;
+    border-radius: 12px;  
 }
+
