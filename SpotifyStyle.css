@@ -15,13 +15,18 @@ a{
 header{
     display: flex;
     align-items: center;
-    /*background-color: aliceblue;*/
+    
 }
 
 main{
     display: grid;
     grid-template-columns: 310px 1fr 350px;
-    height: 100vh;
+    height: 80vh;
+    
+}
+
+footer{
+    height: 90px;
 }
 
 .logoCircle{
@@ -218,7 +223,7 @@ main{
 .coluna{
     overflow-y: auto;
     height: 100%;
-    padding: 20px;
+    padding: 5px;
 }
 
 .leftside{
@@ -233,3 +238,26 @@ main{
     background-color: rgb(0, 0, 255);
 }
 
+.corpocoluna{
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+.playerfield{
+    background-color: rgb(133, 13, 245);
+    overflow-y: auto;
+    height: 100%;
+    padding: 5px;
+    
+}
+
+.corpoplayer{
+    background-color: rgb(0, 0, 0);
+    height: 90%;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 8px;
+}
