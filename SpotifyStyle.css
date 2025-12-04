@@ -301,6 +301,24 @@ footer{
 }
 
 
+.buttonsartplay{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.buttonsartplay-play, .buttonsartplay-art{
+    background-color: rgb(61, 61, 61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 28px;
+    border-radius: 40px;
+}
+
+
 
 
 .playerfield{
