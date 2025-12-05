@@ -133,7 +133,6 @@ footer{
     margin-right: auto;
     display: flex;
     gap: 20px;
-    /*background-color: aqua;*/
     width: 600px;
 }
 
@@ -142,9 +141,8 @@ footer{
     justify-content: end;
     align-items: center;
     display: flex;
-    gap: 10px;
-    /*background-color: red;*/
-    width: 600px;
+    gap: 30px;
+    width: 500px;
     height: 45px;
 }
 
@@ -153,11 +151,11 @@ footer{
     color: rgb(0, 0, 0);
     border-radius: 50px;
     height: 32px;
-    width: 150px;
+    width: 175px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 13px;
     transition: all;
 }
 
@@ -205,7 +203,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     height: 45px;
 }
 
