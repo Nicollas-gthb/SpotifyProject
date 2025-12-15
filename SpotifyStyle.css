@@ -473,7 +473,6 @@ footer{
 .rightside-titulo{
     margin-left: 15px;
     font-size: 18px;
-    color: rgb(255, 255, 255);
 }
 
 
@@ -482,6 +481,44 @@ footer{
     margin-left: 15px;
     border-radius: 12px;
 }
+
+.rightside-nomesOpcoes{
+    display: flex;
+    align-items: center;
+}
+
+.nomes-nomeMusica{
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+.nomes-autor{
+    margin-left: 15px;
+    color: rgb(159, 159, 159);
+    margin-top: -30px;
+}
+
+.opcoes{
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.opcoes-circulocriar{
+    background-color: rgb(33, 33, 33);
+    height: 12px;
+    width: 13px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.opcoes-criar{
+    font-size: 12px;
+}
+
 
 
 
