@@ -16,7 +16,7 @@ header{
     display: flex;
     align-items: center;
     height: 6vh;
-    margin-bottom: 3px;
+    padding-bottom: 3px;
 }
 
 main{
@@ -31,6 +31,8 @@ footer{
     height: 13vh;
     margin-top: 10px;
 }
+
+
 
 .header-logoCircle{
     width: 45px;
@@ -82,6 +84,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40px;
 }
 
 .header-searchBox{
@@ -90,7 +93,7 @@ footer{
     align-items: center;
     justify-content: center;
     border-radius: 50px;
-    height: 50px;
+    height: 45px;
     transition: all, 0.25s;
 }
 
@@ -228,10 +231,13 @@ footer{
 
 
 .coluna{
-    overflow-y: hidden;
     height: 100%;
     padding: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .leftside{
     background-color: rgb(0, 0, 0);
@@ -250,8 +256,9 @@ footer{
     height: 100%;
     width: 100%;
     border-radius: 12px;
-    overflow-y: auto;
+    overflow-y: visible;
 }
+
 
 .cesquerda{
     display: flex;
@@ -271,14 +278,12 @@ footer{
     margin-left: 5px;
 }
 
-
 .biblioteca-direita{
     display: flex;
     align-items: center;
     gap: 20px;
     margin-left: auto;
 }
-
 
 .biblioteca-suabiblioteca{
     font-size: 18px;
@@ -325,7 +330,6 @@ footer{
     padding-bottom: 5px;
 }
 
-
 .leftside-buscarecente{
     display: flex;
     align-items: center;
@@ -362,7 +366,6 @@ footer{
     flex-direction: column;
     align-items: center;
 }
-
 
 .lista-playlist{
     display: flex;
@@ -422,7 +425,6 @@ footer{
 }
 
 
-
 .lista-artista{
     display: flex;
     align-items: center;
@@ -463,21 +465,26 @@ footer{
 
 
 
-
-
 .cdireita{
     background-color: rgb(21, 21, 21);
-    
+
+}
+
+.rightside-scroll{
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 20px;
 }
 
 .rightside-titulo{
     margin-left: 15px;
     font-size: 18px;
+    height: auto;
+    flex-shrink: 0;
 }
 
-
 .rightside-img{
-    width: 90%;
+    width: 92%;
     margin-left: 15px;
     border-radius: 12px;
 }
@@ -488,6 +495,7 @@ footer{
 }
 
 .nomes-nomeMusica{
+    margin-top: 12px;
     margin-left: 15px;
     font-size: 25px;
 }
@@ -512,11 +520,32 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .opcoes-criar{
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.rightside-resumo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resumo-parteCima{
+    background: url(images/Linkin-Park.jpg);
+    width: 92%;
+    height: 50px;
+}
+
+.resumo-parteCima p{
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.resumo-parteBaixo{
+    background-color: red;
 }
 
 
