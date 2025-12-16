@@ -234,8 +234,7 @@ footer{
     height: 100%;
     padding: 5px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    
 }
 
 
@@ -256,7 +255,8 @@ footer{
     height: 100%;
     width: 100%;
     border-radius: 12px;
-    overflow-y: visible;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -531,12 +531,15 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 .resumo-parteCima{
-    background: url(images/Linkin-Park.jpg);
+    background: url(images/Linkin-Park.jpg) 80% / cover no-repeat;
     width: 92%;
-    height: 50px;
+    height: 210px;
+    border-radius: 10px;
 }
 
 .resumo-parteCima p{
@@ -545,7 +548,11 @@ footer{
 }
 
 .resumo-parteBaixo{
-    background-color: red;
+    background-color: rgb(41, 41, 41);
+    width: 92%;
+    height: 200px;
+    border-radius: 0 0 10px 10px;
+    margin-top: -5px;
 }
 
 
