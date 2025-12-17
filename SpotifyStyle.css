@@ -588,6 +588,7 @@ footer{
 
 .parteBaixo-ouvintesDeixar{
     margin-left: 17px;
+    margin-right: 6px;
     display: flex;
     align-items: center;
     gap: 18px;
@@ -595,7 +596,7 @@ footer{
 
 .ouvintes{
     width: 140px;
-    font-size: 18px;
+    font-size: 15px;
     color: rgb(211, 211, 211);
 }
 
@@ -612,13 +613,15 @@ footer{
     width: 138px;
     margin-right: 5px;
 
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
 }
 
 .parteBaixo-descricao{
     color: rgb(211, 211, 211);
     margin-left: 17px;
+    margin-right: 17px;
+    font-size: 14px;
 }
 
 
