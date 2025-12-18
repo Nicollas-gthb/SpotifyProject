@@ -394,28 +394,28 @@ footer{
 }
 
 .playlist-img img{
-    width: 50px;
-    height: 52px;
+    width: 47px;
+    height: 46px;
     border-radius: 6px;
     margin-left: 8px;
 }
 
 .playlist-likeicon{
-    background: linear-gradient(318deg, rgba(220, 249, 255, 1), rgba(35, 213, 253, 1), rgba(31, 68, 193, 1));
+    background: linear-gradient(318deg, rgba(220, 249, 255, 1), rgb(124, 110, 220), rgb(70, 16, 220));
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 50px;
-    height: 52px;
+    width:48px;
+    height: 48px;
     border-radius: 6px;
     margin-left: 8px;
 }
 
 .playlist-likeicon img{
-    height: 18px;
-    width: 18px;
+    height:15px;
+    width:15px;
     margin-left: 0px;
 }
 
