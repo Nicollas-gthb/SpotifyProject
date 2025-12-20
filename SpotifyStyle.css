@@ -564,7 +564,38 @@ label:hover{
     margin-left: 5px;
 }
 
+.middle-opcoesRapidas{
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    gap: 3px;
+    width: 88%;
+}
 
+.opcoesRapidas-coluna{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.opcoesRapidas{
+    display: flex;
+    gap: 10px;
+    background-color: rgb(255, 255, 255, 10%);
+    
+    height: 48px;
+    border-radius: 5px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.opcoesRapidas img{
+    width: 48px;
+    height: 48px;
+    border-radius: 5px 0 0 5px;
+}
 
 
 
