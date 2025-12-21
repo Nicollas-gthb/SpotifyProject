@@ -98,13 +98,17 @@ label:hover{
 }
 
 .header-homeCircle img{
-    width: 27px;
-    height: 27px;
+    width: 20px;
+    height: 20px;
 }
 
 .header-homeCircle:hover{
     transform: scale(1.05);
     background-color: rgb(46, 46, 46);
+}
+
+.header-homeCircle:active{
+    src: format("icons/homeFull-figma.svg");
 }
 
 .header-searchCircle{
@@ -649,7 +653,9 @@ label:hover{
 }
 
 .opcoesPrincipais-carrossel{
+    display: flex;
     margin-top: 5px;
+    overflow-x: auto;
 }
 
 
