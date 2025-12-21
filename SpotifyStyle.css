@@ -652,10 +652,56 @@ label:hover{
     margin-top: 5px;
 }
 
-.opcoesPrincipais-carrossel img{
+
+.carrossel-conjunto{
+    width: 178px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+.carrossel-conjunto:hover{
+    background-color: rgb(255, 255, 255, 7%);
+
+    .opcoesRapidas-playCircle{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 20px;
+        margin-top: -80px;
+        margin-bottom: 35px;
+        background-color: rgb(29, 185, 84);
+    }
+
+    .opcoesRapidas-play{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.carrossel-conjunto img{
     width: 155px;
     height: 155px;
+    border-radius: 8px;
+    margin: 10px;
 }
+
+.carrossel-conjunto p{
+    margin: 5px 10px 0 10px;
+    color: rgb(159, 159, 159);
+}
+
 
 
 
