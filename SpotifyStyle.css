@@ -597,7 +597,31 @@ label:hover{
     border-radius: 5px 0 0 5px;
 }
 
+.opcoesRapidas-playCircle{
+    display: none;
+}
 
+.opcoesRapidas:hover{
+
+    .opcoesRapidas-playCircle{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 10px;
+        margin-top: 5px;
+        background-color: rgb(29, 185, 84);
+    }
+
+    .opcoesRapidas-play{
+        width: 16px;
+        height: 16px;
+        margin-left: 3px;
+    }
+}
 
 
 
