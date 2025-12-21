@@ -602,6 +602,7 @@ label:hover{
 }
 
 .opcoesRapidas:hover{
+    background-color: rgb(255, 255, 255, 20%);
 
     .opcoesRapidas-playCircle{
         width: 35px;
@@ -623,6 +624,38 @@ label:hover{
     }
 }
 
+.middle-opcoesPrincipais{
+    
+    margin-top: 35px;
+    margin-left: 5px;
+}
+
+.opcoesPrincipais-titulos{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulos-menor{
+    font-size: 12px;
+    margin-bottom: 0px;
+    color: rgb(159, 159, 159);
+}
+
+.titulos-maior{
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.opcoesPrincipais-carrossel{
+    margin-top: 5px;
+}
+
+.opcoesPrincipais-carrossel img{
+    width: 155px;
+    height: 155px;
+}
 
 
 
