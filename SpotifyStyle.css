@@ -107,10 +107,6 @@ label:hover{
     background-color: rgb(46, 46, 46);
 }
 
-.header-homeCircle:active{
-    src: format("icons/homeFull-figma.svg");
-}
-
 .header-searchCircle{
     width: 45px;
     height: 45px;
@@ -145,18 +141,14 @@ label:hover{
     outline: 2px solid white;
 }
 
-.header-searchBox:hover
-{
+.header-searchBox:hover{
     background-color: rgb(46, 46, 46);
-    .header-searchCircle{
-        background-color: rgb(46, 46, 46);
-    }
-    .header-albumCircle{
-        background-color: rgb(46, 46, 46);
-    }
-    .header-inputSearch{
-        background-color: rgb(46, 46, 46);
-    }
+}
+
+.header-searchBox:hover .header-searchCircle,
+.header-searchBox:hover .header-albumCircle,
+.header-searchBox:hover .header-inputSearch{
+    background-color: rgb(46, 46, 46);
 }
 
 .header-inputSearch:hover{
@@ -232,9 +224,10 @@ label:hover{
 
 .header-instalar:hover{
     transform: scale(1.05);
-    .inst{
-        color: rgb(255, 255, 255);
-    }
+}
+
+.header-instalar:hover .inst{
+    color: rgb(255, 255, 255);
 }
 
 .header-inst{
@@ -542,6 +535,7 @@ label:hover{
 .middle-scroll{
     flex: 1;
     overflow-y: auto;
+    padding-right: 10px;
     padding-bottom: 20px;
     scroll-behavior: smooth;
 }
@@ -573,7 +567,8 @@ label:hover{
     font-weight: bold;
     display: flex;
     gap: 3px;
-    width: 88%;
+    width: 100%;
+    max-width: 590px;
 }
 
 .opcoesRapidas-coluna{
@@ -593,43 +588,62 @@ label:hover{
     border-radius: 5px;
     margin-left: 6px;
     cursor: pointer;
+
+    position: relative;
 }
 
 .opcoesRapidas img{
     width: 48px;
     height: 48px;
     border-radius: 5px 0 0 5px;
+    position: relative;
 }
 
 .opcoesRapidas-playCircle{
-    display: none;
+    position: absolute;
+
+    right: 8px;
+    top: 50%;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+    background-color: rgb(29, 185, 84);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transform: translateY(-50%) translateY(8px);
+    
+}
+
+.opcoesRapidas-play{
+    width: 20px;
+    height: 20px;
 }
 
 .opcoesRapidas:hover{
     background-color: rgb(255, 255, 255, 20%);
-
-    .opcoesRapidas-playCircle{
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: 10px;
-        margin-top: 5px;
-        background-color: rgb(29, 185, 84);
-    }
-
-    .opcoesRapidas-play{
-        width: 16px;
-        height: 16px;
-        margin-left: 3px;
-    }
 }
 
-.middle-opcoesPrincipais{
-    
+.opcoesRapidas:hover .opcoesRapidas-playCircle{
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.opcoesRapidas:hover .opcoesRapidas-play{
+    opacity: 1;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+}
+
+
+
+.middle-opcoesPrincipais{ 
     margin-top: 35px;
     margin-left: 5px;
 }
@@ -653,9 +667,14 @@ label:hover{
 }
 
 .opcoesPrincipais-carrossel{
+    width: 90%;
     display: flex;
     margin-top: 5px;
+    padding-bottom: 10px;
     overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
 
 
@@ -667,34 +686,37 @@ label:hover{
     align-items: center;
     border-radius: 5px;
     font-size: 14px;
+    scroll-snap-align: start;
+    position: relative;
+    cursor: pointer;
 }
 
+.carrossel-conjunto .opcoesRapidas-play{
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+}
+
+.carrossel-conjunto .opcoesRapidas-playCircle {
+    right: 20px;
+    bottom: 65px;
+    left: auto;
+    top: auto;
+    width: 48px;
+    height: 48px;
+    
+}
 
 .carrossel-conjunto:hover{
     background-color: rgb(255, 255, 255, 7%);
-
-    .opcoesRapidas-playCircle{
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: 20px;
-        margin-top: -80px;
-        margin-bottom: 35px;
-        background-color: rgb(29, 185, 84);
-    }
-
-    .opcoesRapidas-play{
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 }
+
+.carrossel-conjunto:hover .opcoesRapidas-playCircle{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 .carrossel-conjunto img{
     width: 155px;
@@ -707,6 +729,24 @@ label:hover{
     margin: 5px 10px 0 10px;
     color: rgb(159, 159, 159);
 }
+
+.opcoesPrincipais-carrossel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.opcoesPrincipais-carrossel::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.opcoesPrincipais-carrossel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.opcoesPrincipais-carrossel::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255,255,255,0.25);
+}
+
 
 
 
