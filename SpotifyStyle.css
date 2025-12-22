@@ -100,11 +100,16 @@ label:hover{
 .header-homeCircle img{
     width: 20px;
     height: 20px;
+    opacity: 60%;
 }
 
 .header-homeCircle:hover{
     transform: scale(1.05);
     background-color: rgb(46, 46, 46);
+}
+
+.header-homeCircle img:hover{
+    opacity: 100%;
 }
 
 .header-searchCircle{
@@ -177,6 +182,16 @@ label:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.header-searchCircle img, .header-albumCircle img{
+    width: 22px;
+    height: 22px;
+    opacity: 60%;
+}
+
+.header-searchCircle img:hover, .header-albumCircle img:hover{
+    opacity: 100%;
 }
 
 .header-left{
@@ -873,15 +888,28 @@ label:hover{
 }
 
 .nomes-nomeMusica{
+    color: rgb(255, 255, 255);
     margin-top: 12px;
     margin-left: 15px;
     font-size: 25px;
 }
 
+.nomes-nomeMusica:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .nomes-autor{
+    color: rgb(255, 255, 255);
+    opacity: 70%;
     margin-left: 15px;
-    color: rgb(159, 159, 159);
     margin-top: -30px;
+}
+
+.nomes-autor:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    opacity: 80%;
 }
 
 .opcoes{
@@ -898,12 +926,27 @@ label:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 70%;
+}
+
+.opcoes-circulocriar:hover{
+    background-color: rgb(50, 50, 50);
+    cursor: pointer;
+    scale: 1.05;
+    opacity: 100%;
 }
 
 .opcoes-criar{
     font-size: 14px;
     font-weight: bold;
+    color: rgb(255, 255, 255);
+    opacity: 70%;
 }
+.opcoes-circulocriar:hover .opcoes-criar{
+    scale: 1.05;
+    opacity: 100%;
+}
+
 
 .rightside-resumo{
     display: flex;
@@ -912,6 +955,10 @@ label:hover{
     flex-direction: column;
     width: 100%;
     margin-top: 15px;
+}
+
+.rightside-resumo:hover{
+    cursor: pointer;
 }
 
 .resumo-parteCima{
@@ -924,7 +971,7 @@ label:hover{
 .parteCima-sobre{
     margin-left: 17px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .resumo-parteBaixo{
@@ -964,6 +1011,13 @@ label:hover{
 
     font-size: 13px;
     font-weight: bold;
+}
+
+.deixar-deSeguir:hover{
+    background-color: rgb(50, 50, 50);
+    border: 2px solid rgb(197, 197, 197);
+    scale: 1.05;
+    cursor: pointer;
 }
 
 .parteBaixo-descricao{
