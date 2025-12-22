@@ -162,6 +162,11 @@ label:hover{
     width: 385px;
     border: none;
     outline: none;
+    font-size: 16px;
+}
+
+.header-inputSearch::placeholder{
+    color: rgb(177, 177, 177);
 }
 
 .header-albumCircle{
@@ -200,13 +205,12 @@ label:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
+    font-size: 11px;
     transition: all;
 }
 
 .header-premium:hover{
     transform: scale(1.05);
-    background-color: rgb(215, 215, 215);
 }
 
 .header-instalar{
@@ -226,18 +230,19 @@ label:hover{
     transform: scale(1.05);
 }
 
-.header-instalar:hover .inst{
-    color: rgb(255, 255, 255);
-}
-
 .header-inst{
-    color: rgb(205, 205, 205);
+    color: rgba(255, 255, 255, 0.8);
     height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 5px;
 }
+
+.header-instalar:hover .header-inst{
+    color: rgb(255, 255, 255);
+}
+
 
 .header-instimg{
     width: 16px;
@@ -253,6 +258,20 @@ label:hover{
     height: 45px;
 }
 
+
+
+.outrosi-bell img, .outrosi-amigos img{
+    width: 17px;
+    height: 17px;
+    margin-top: 5px;
+    opacity: 60%;
+}
+
+.outrosi-bell img:hover, .outrosi-amigos img:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+
 .header-conta{
     background-color: rgb(53, 183, 6);
     color: rgb(0, 0, 0);
@@ -263,6 +282,11 @@ label:hover{
     align-items: center;
     display: flex;
     margin-right: 5px;
+}
+
+.header-conta:hover{
+    scale: 1.05;
+    cursor: pointer;
 }
 
 
@@ -323,12 +347,18 @@ label:hover{
 }
 
 .biblioteca-suabiblioteca{
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 10px;
 }
 
+.biblioteca-suabiblioteca:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .biblioteca-criar{
-    font-size: 25px;
+    font-size: 24px;
+    color: rgb(255, 255, 255, 50%);
 }
 
 .biblioteca-circulocriar{
@@ -341,11 +371,26 @@ label:hover{
     justify-content: center;
 }
 
+.biblioteca-circulocriar:hover{
+    cursor: pointer;
+    background-color: rgb(40, 40, 40);
+}
+
+.biblioteca-circulocriar:hover .biblioteca-criar{
+    color: rgb(255, 255, 255);
+}
+
 .biblioteca-mostrar{
     height: 15px;
     width: 15px;
     margin-right: 28px;
+    opacity: 50%;
 }
+
+.biblioteca-mostrar:hover{
+    cursor: pointer;
+    opacity: 100%;
+}   
 
 
 .leftside-buttonsartplay{
@@ -364,7 +409,13 @@ label:hover{
     width: 77px;
     height: 25px;
     border-radius: 15px;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
+    padding-top: 2px;
+}
+
+.buttonsartplay-play:hover, .buttonsartplay-art:hover{
+    background-color: rgb(60, 60, 60);
+    cursor: pointer;
 }
 
 
@@ -399,6 +450,17 @@ label:hover{
 .buscarecente-busca{
     margin-top: -10px;
     margin-left: 20px;
+    border-radius: 50%;
+    height: 27px;
+    width: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.buscarecente-busca:hover{
+    background-color: rgb(50, 50, 50);
+    cursor: pointer;
 }
 
 .buscarecente-busca img{
@@ -413,6 +475,14 @@ label:hover{
     margin-top: -13px;
     margin-right: 24px;
     gap: 9px;
+    opacity: 50%;
+    font-size: 14px;
+}
+
+.buscarecente-recente:hover{
+    opacity: 100%;
+    cursor: pointer;
+    scale: 1.05;
 }
 
 .buscarecente-recente img{
@@ -434,11 +504,14 @@ label:hover{
     border-radius: 6px;
     gap: 11px;
 }
+
 .lista-playlist:hover{
     background-color: rgb(41, 41, 41);
-    .playlist-img img{
-        opacity: 50%;
-    }
+    cursor: pointer;
+}
+
+.lista-playlist:hover .playlist-img img{
+    opacity: 50%;
 }
 
 .playlist-img img{
@@ -474,13 +547,13 @@ label:hover{
 }
 
 .playlist-curtidas{
-    font-size: 17px;
+    font-size: 15px;
     margin-top: -6px;
 }
 
 .playlist-quantidade{
-    
-    font-size: 16px;
+    color: rgb(159, 159, 159);
+    font-size: 14px;
 }
 
 
@@ -494,9 +567,11 @@ label:hover{
 }
 .lista-artista:hover{
     background-color: rgb(41, 41, 41);
-    .artista-img img{
-        opacity: 50%;
-    }
+    cursor: pointer;
+}
+
+.lista-artista:hover .artista-img img{
+    opacity: 50%;
 }
 
 .artista-img img{
@@ -514,12 +589,13 @@ label:hover{
 }
 
 .artista-curtidas{
-    font-size: 17px;
+    font-size: 15px;
     margin-top: -6px;
 }
 
 .artista-quantidade{
-    font-size: 16px;
+    font-size: 14px;
+    color: rgb(159, 159, 159);
 }
 
 
