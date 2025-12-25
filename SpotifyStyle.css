@@ -525,15 +525,44 @@ label:hover{
     cursor: pointer;
 }
 
-.lista-playlist:hover .playlist-img img{
+.lista-playlist:hover .playlist-imgContent{
     opacity: 50%;
 }
 
-.playlist-img img{
-    width: 47px;
-    height: 46px;
+.lista-playlist:hover .playlist-playbutton{
+    opacity: 100%;
+}
+
+.lista-playlist:hover .playlist-playbuttonIcon{
+    opacity: 100%;
+}
+
+.playlist-playbuttonIcon{
+    width: 18px;
+    height: 18px;
+    position: fixed;
+    opacity: 0;
+}
+
+.playlist-playbutton{
+    width: 18px;
+    height: 18px;
+    position: fixed;
+    opacity: 0;
+    margin-left: 25px;
+}
+
+
+.playlist-imgContent{
+    width: 48px;
+    height: 48px;
     border-radius: 6px;
     margin-left: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .playlist-likeicon{
@@ -549,7 +578,7 @@ label:hover{
     margin-left: 8px;
 }
 
-.playlist-likeicon img{
+.playlist-likeicon .playlist-imgContent{
     height:15px;
     width:15px;
     margin-left: 0px;
@@ -585,11 +614,15 @@ label:hover{
     cursor: pointer;
 }
 
-.lista-artista:hover .artista-img img{
+.lista-artista:hover .artista-imgContent{
     opacity: 50%;
 }
 
-.artista-img img{
+.lista-artista:hover .playlist-playbutton{
+    opacity: 100%;
+}
+
+.artista-imgContent{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -807,8 +840,6 @@ label:hover{
     transform: translateY(0);
 }
 
-
-
 .carrossel-conjunto img{
     width: 155px;
     height: 155px;
@@ -842,6 +873,8 @@ label:hover{
 
 
 
+
+
 .cdireita{
     background-color: rgb(21, 21, 21);
 }
@@ -866,8 +899,6 @@ label:hover{
 .rightside-scroll::-webkit-scrollbar-thumb:hover{
     background-color: rgb(255, 255, 255, 0.3);
 }
-
-
 
 .rightside-titulo{
     margin-left: 15px;
