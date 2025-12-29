@@ -793,6 +793,7 @@ label:hover{
 .opcoesPrincipais-wrapper{
     position: relative;
     width: 100%;
+    z-index: 10;
 }
 
 .opcoesPrincipais-wrapper::before{
@@ -807,6 +808,7 @@ label:hover{
         rgba(115, 255, 0, 0), 
         rgb(21, 21, 21)
     );
+    z-index: 5;
 }
 
 .opcoesPrincipais-carrossel{
@@ -830,8 +832,9 @@ label:hover{
     border-radius: 5px;
     font-size: 14px;
     scroll-snap-align: start;
-    /*position: relative;*/
+    position: relative;
     cursor: pointer;
+    z-index: 1;
 }
 
 .carrossel-conjunto .opcoesRapidas-play{
