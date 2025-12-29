@@ -849,8 +849,7 @@ label:hover{
     left: auto;
     top: auto;
     width: 48px;
-    height: 48px;
-    
+    height: 48px;   
 }
 
 .carrossel-conjunto:hover{
@@ -899,10 +898,32 @@ label:hover{
     background-color: rgb(21, 21, 21);
 }
 
+.rightside-wrapper{
+    position:relative;
+    width: 100%;
+    z-index: 10;
+}
+
+.rightside-wrapper::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 15px;
+    
+    background: linear-gradient(to bottom, 
+        rgb(21, 21, 21),
+        rgba(0, 0, 0, 15%)
+        
+    );
+    z-index: 5;
+}
+
+
 .rightside-scroll{
     flex: 1;
     overflow-y: auto;
     padding-bottom: 20px;
+    padding-top: 5px;
     scroll-behavior: smooth;
 }
 
