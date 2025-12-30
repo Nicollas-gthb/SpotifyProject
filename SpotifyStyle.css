@@ -1121,9 +1121,10 @@ label:hover{
 }
 
 .corpoplayer-left{
-    background-color: purple;
+    background-color: rgb(0, 0, 0);
     width: 25%;
     height: 100%;
+    display: flex;
 }
 
 .corpoplayer-meio{
@@ -1142,15 +1143,15 @@ label:hover{
 .resumo-conjunto{
     display: flex;
     align-items: center;
-    height: 68px;
-    width: 96%;
+    height: 96%px;
+    width: 80%;
     border-radius: 6px;
-    gap: 11px;
+    gap: 15px;
 }
 
 .resumo-imgContent{
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     border-radius: 6px;
     margin-left: 8px;
 
@@ -1162,17 +1163,27 @@ label:hover{
 .resumo-p{
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0px;
 }
 
 .resumo-curtidas{
-    font-size: 15px;
-    margin-top: -6px;
+    font-size: 14px;
 }
 
 .resumo-quantidade{
     color: rgb(159, 159, 159);
-    font-size: 14px;
+    font-size: 12px;
+}
+
+.resumo-curtidas:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.resumo-quantidade:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
 }
 
 .resumo-circulocriar{
