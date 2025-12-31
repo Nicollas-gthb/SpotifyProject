@@ -450,6 +450,7 @@ label:hover{
 }
 .leftside-scroll::-webkit-scrollbar-thumb:hover{
     background-color: rgb(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
 .leftside-buscarecente{
@@ -650,7 +651,7 @@ label:hover{
 
 .cmeio{
     background-color: rgb(21, 21, 21);
-    padding: 0 20px;
+    padding-top: 0px;
 }
 
 .middle-scroll{
@@ -661,7 +662,7 @@ label:hover{
 }
 
 .middle-scroll::-webkit-scrollbar{
-    width: 26px;
+    width: 15px;
 }
 .middle-scroll::-webkit-scrollbar-track{
     background: transparent;
@@ -671,6 +672,8 @@ label:hover{
 }
 .middle-scroll::-webkit-scrollbar-thumb:hover{
     background-color: rgb(255, 255, 255, 0.3);
+    z-index: 10;
+    cursor: pointer;
 }
 
 
@@ -678,7 +681,8 @@ label:hover{
     display: flex;
     gap: 10px;
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: 40px;
+    width: 90%;
 }
 
 .middle-opcoesRapidas{
@@ -686,8 +690,9 @@ label:hover{
     font-weight: bold;
     display: flex;
     gap: 3px;
-    width: 100%;
+    width: 95%;
     max-width: 590px;
+    margin-left: 40px;
 }
 
 .opcoesRapidas-coluna{
@@ -764,7 +769,9 @@ label:hover{
 
 .middle-opcoesPrincipais{ 
     margin-top: 35px;
-    margin-left: 5px;
+    margin-left: 40px;
+    margin-right: 0;
+    z-index: 5;
 }
 
 .opcoesPrincipais-titulos{
@@ -793,7 +800,7 @@ label:hover{
 
 .opcoesPrincipais-wrapper::before{
     content: "";
-    width: 60px;
+    width: 30px;
     height: 100%;
     right: 0;
     position: absolute;
@@ -881,6 +888,7 @@ label:hover{
 
 .opcoesPrincipais-carrossel::-webkit-scrollbar-thumb:hover {
     background-color: rgb(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
 
@@ -933,6 +941,7 @@ label:hover{
 }
 .rightside-scroll::-webkit-scrollbar-thumb:hover{
     background-color: rgb(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
 .rightside-titulo{
