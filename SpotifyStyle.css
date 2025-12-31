@@ -1109,7 +1109,7 @@ label:hover{
 }
 
 .corpoplayer{
-    background-color: rgb(87, 2, 2);
+    background-color: rgb(0, 0, 0);
     height: 100%;
     width: 100%;
     border-radius: 12px;  
@@ -1126,17 +1126,18 @@ label:hover{
 }
 
 .corpoplayer-meio{
-    background-color: rgb(3, 3, 56);
+    background-color: rgb(0, 0, 0);
     width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
 .corpoplayer-right{
-    background-color: rgb(51, 83, 3);
+    background-color: rgb(0, 0, 0);
     width: 20%;
     height: 100%;
 }
@@ -1224,13 +1225,55 @@ label:hover{
     opacity: 100%;
 }
 
+.meio-controladorCima{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.controlesPlayer{
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.controlesPlayer:hover{
+    scale: 1.05;
+    opacity: 100%;
+}
+
+.controladorCima-circulo{
+    background-color: rgb(255, 255, 255);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controladorCima-circulo:hover{
+    background-color: rgb(255, 255, 255, 90%);
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.controladorCima-play{
+    width: 18px;
+    height: 18px;
+    margin-left: 3px;
+}
+
+
+
 
 .meio-controladorBaixo{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    
 }
 
 .controladorBaixo-progresso{
@@ -1254,7 +1297,7 @@ label:hover{
 .controladorBaixo-progresso:hover::-webkit-slider-runnable-track{
     background: linear-gradient(
     to right,
-    rgb(30, 215, 96) 50%,
+    rgb(29, 185, 84) 50%,
     rgb(96, 96, 96) 50%
   );
 }
