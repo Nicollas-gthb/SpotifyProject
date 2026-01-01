@@ -1,7 +1,6 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v3.5a.5.5 0 00.5.5H7M3 11V7.5a.5.5 0 01.5-.5H7m18 0h3.5a.5.5 0 01.5.5V11m0 10v3.5a.5.5 0 01-.5.5H25"/> </g>
-</svg>
+<svg width="491" height="478" viewBox="0 0 491 478" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M466 318.155V349C466 406.438 419.438 453 362 453H313.295" stroke="white" stroke-width="50" stroke-linecap="round"/>
+<path d="M25.0005 318.155V349C25.0005 406.438 71.5629 453 129.001 453H177.706" stroke="white" stroke-width="50" stroke-linecap="round"/>
+<path d="M466 148.5V129C466 71.5624 419.437 25 362 25H318.187" stroke="white" stroke-width="50" stroke-linecap="round"/>
+<path d="M25.0001 148.5V129C25.0001 71.5624 71.5625 25 129 25H172.813" stroke="white" stroke-width="50" stroke-linecap="round"/>
+</svg>
