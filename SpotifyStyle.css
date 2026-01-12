@@ -1298,17 +1298,22 @@ label:hover{
     border-radius: 15px;
     background: linear-gradient(
     to right,
-    rgb(255, 255, 255) 50%,
-    rgb(96, 96, 96)  50%
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) var(--progress),
+    rgb(83, 83, 83) var(--progress),
+    rgb(83, 83, 83) 100%
   );
 }
 
 .controladorBaixo-progresso:hover::-webkit-slider-runnable-track{
-    background: linear-gradient(
+  background: linear-gradient(
     to right,
-    rgb(29, 185, 84) 50%,
-    rgb(96, 96, 96) 50%
+    rgb(29, 185, 84) 0%,
+    rgb(29, 185, 84) var(--progress),
+    rgb(96, 96, 96) var(--progress),
+    rgb(96, 96, 96) 100% 
   );
+  /*rgb(83, 83, 83)*/
 }
 
 .controladorBaixo-progresso::-webkit-slider-thumb{
