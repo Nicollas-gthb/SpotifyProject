@@ -1386,25 +1386,19 @@ label:hover{
     opacity: 1;
 }  
 
-.preVolume-mic, 
-.preVolume-fila, 
-.preVolume-conectar, 
-.volumes-volumeIcon, 
-.posVolume-mini, 
-.posVolume-full{
-    width: 20px;
-    height: 20px;
+.right-icons{
+    width: 15px;
+    height: 15px;
     opacity: 70%;
 }
 
-.preVolume-mic:hover, 
-.preVolume-fila:hover, 
-.preVolume-conectar:hover, 
-.volumes-volumeIcon:hover, 
-.posVolume-mini:hover, 
-.posVolume-full:hover{
+.preVolume-mic{
+    width: 20px;
+    height: 20px;
+}
+
+.right-icons:hover{
     cursor: pointer;
     opacity: 100%;
     scale: 1.05;
 }
-

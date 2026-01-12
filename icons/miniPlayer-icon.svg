@@ -1,7 +1,3 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V12.2676C18.7058 12.0974 18.3643 12 18 12H14C12.8954 12 12 12.8954 12 14V18C12 18.3643 12.0974 18.7058 12.2676 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z" fill="#ffffff"/> </g>
-</svg>
+<svg width="587" height="525" viewBox="0 0 587 525" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M537 0C564.614 0 587 22.3859 587 50V507C587 516.941 578.941 525 569 525H312C302.059 525 294 516.941 294 507V299C294 289.059 302.059 281 312 281H569C577.962 281 585.394 287.55 586.771 296.124V239.664H535.053V76.9473C535.053 63.1403 523.86 51.9473 510.053 51.9473H76.9473C63.1403 51.9473 51.9475 63.1403 51.9473 76.9473V447.717C51.9473 461.524 63.1402 472.717 76.9473 472.717H254.771V524.664H50C22.3859 524.664 0.000197915 502.278 0 474.664V50C0.000186818 22.3859 22.3859 0 50 0H537Z" fill="white"/>
+</svg>
