@@ -14,6 +14,11 @@ const totalTime = document.querySelector(".controladorBaixo-fim");
 const volume = document.querySelector(".volumes-regulador");
 const volumeImg = document.querySelector(".volumes-volumeIcon");
 
+const volumeMute = "icons/volumeMute-icon.svg";
+const volumeMin = "icons/volumeMin-icon.svg";
+const volumeMid = "icons/volumeMid-icon.svg";
+const volumeMax = "icons/volumeMax-icon.svg";
+
 
 playPauseButton.addEventListener('click', () => {
     if(audio.paused){
@@ -59,6 +64,16 @@ volume.addEventListener('input', () => {
 
     const volumePercent = volume.value * 100;
     volume.style.setProperty('--volume', `${volumePercent}%`);
+
+    if(volumePercent >= 70){
+        volumeImg.src = volumeMax;
+    }else if(volumePercent >= 35){
+        volumeImg.src = volumeMid;
+    }else if(volumePercent > 0){
+        volumeImg.src = volumeMin;
+    }else{
+        volumeImg.src = volumeMute;
+    }
 })
 
 volumeImg.addEventListener('click', () => {
@@ -72,5 +87,15 @@ volumeImg.addEventListener('click', () => {
         audio.volume = last;
         volume.value = last;
         volume.style.setProperty('--volume', `${last * 100}%`)
+    }
+
+    if(audio.volume >= 70){
+        volumeImg.src = volumeMax;
+    }else if(audio.volume >= 35){
+        volumeImg.src = volumeMid;
+    }else if(audio.volume > 0){
+        volumeImg.src = volumeMin;
+    }else{
+        volumeImg.src = volumeMute;
     }
 })
