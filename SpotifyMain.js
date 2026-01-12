@@ -37,3 +37,14 @@ audio.addEventListener('loadedmetadata', () => {
     totalTime.textContent = formatTime(audio.duration);
 })
 
+audio.addEventListener('timeupdate', () => {
+    progressRange.value = audio.currentTime;
+    currentTime.textContent = formatTime(audio.currentTime);
+
+    const percent = (audio.currentTime / audio.duration) * 100;
+    progressRange.style.setProperty('--progress', `${percent}%`);
+})
+
+progressRange.addEventListener('input', () => {
+    audio.currentTime = progressRange.value;
+})
