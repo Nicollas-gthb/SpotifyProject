@@ -31,3 +31,9 @@ function formatTime(seconds){
 
     return `${min}:${sec < 10 ? '0' : ''}${sec}`;
 }
+
+audio.addEventListener('loadedmetadata', () => {
+    progressRange.max = audio.duration;
+    totalTime.textContent = formatTime(audio.duration);
+})
+
