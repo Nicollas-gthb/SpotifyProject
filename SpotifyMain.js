@@ -11,6 +11,7 @@ const progressRange = document.querySelector(".controladorBaixo-progresso");
 const currentTime = document.querySelector(".controladorBaixo-inicio");
 const totalTime = document.querySelector(".controladorBaixo-fim");
 
+audio.volume = 0.2;
 
 playPauseButton.addEventListener('click', () => {
     if(audio.paused){
@@ -23,3 +24,10 @@ playPauseButton.addEventListener('click', () => {
         playPause.style.marginLeft = "4px";
     }
 })
+
+function formatTime(seconds){
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+}
