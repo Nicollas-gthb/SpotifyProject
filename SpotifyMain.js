@@ -65,15 +65,7 @@ volume.addEventListener('input', () => {
     const volumePercent = volume.value * 100;
     volume.style.setProperty('--volume', `${volumePercent}%`);
 
-    if(volumePercent >= 70){
-        volumeImg.src = volumeMax;
-    }else if(volumePercent >= 35){
-        volumeImg.src = volumeMid;
-    }else if(volumePercent > 0){
-        volumeImg.src = volumeMin;
-    }else{
-        volumeImg.src = volumeMute;
-    }
+    switchVolumeIcon(volumePercent);
 })
 
 volumeImg.addEventListener('click', () => {
@@ -82,20 +74,24 @@ volumeImg.addEventListener('click', () => {
         audio.volume = 0;
         volume.value = 0;
         volume.style.setProperty('--volume', '0%');
+        switchVolumeIcon(audio.volume * 100);
     }else{
         const last = audio.dataset.lastVolume || 0.2;
         audio.volume = last;
         volume.value = last;
-        volume.style.setProperty('--volume', `${last * 100}%`)
+        volume.style.setProperty('--volume', `${last * 100}%`);
+        switchVolumeIcon(last * 100);
     }
+})
 
-    if(audio.volume >= 70){
+function switchVolumeIcon(volumeValue){
+    if(volumeValue >= 70){
         volumeImg.src = volumeMax;
-    }else if(audio.volume >= 35){
+    }else if(volumeValue >= 35){
         volumeImg.src = volumeMid;
-    }else if(audio.volume > 0){
+    }else if(volumeValue > 0){
         volumeImg.src = volumeMin;
     }else{
         volumeImg.src = volumeMute;
     }
-})
+}
