@@ -11,7 +11,9 @@ const progressRange = document.querySelector(".controladorBaixo-progresso");
 const currentTime = document.querySelector(".controladorBaixo-inicio");
 const totalTime = document.querySelector(".controladorBaixo-fim");
 
-audio.volume = 0.2;
+const volume = document.querySelector(".volumes-regulador");
+const volumeImg = document.querySelector(".volumes-volumeIcon");
+
 
 playPauseButton.addEventListener('click', () => {
     if(audio.paused){
@@ -47,4 +49,14 @@ audio.addEventListener('timeupdate', () => {
 
 progressRange.addEventListener('input', () => {
     audio.currentTime = progressRange.value;
+})
+
+audio.volume = volume.value;
+volume.style.setProperty('--volume', `${volume.value * 100}%`);
+
+volume.addEventListener('input', () => {
+    audio.volume = volume.value;
+
+    const volumePercent = volume.value * 100;
+    volume.style.setProperty('--volume', `${volumePercent}%`);
 })

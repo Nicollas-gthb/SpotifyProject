@@ -1356,6 +1356,8 @@ label:hover{
     height: 4px;
     width: 100px;
     cursor: pointer;
+
+    --volume: 20%;
 }
 
 .volumes-regulador::-webkit-slider-runnable-track{
@@ -1363,7 +1365,9 @@ label:hover{
     border-radius: 15px;
     background: linear-gradient(
     to right,
-    rgb(255, 255, 255) 50%,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) var(--volume),
+    rgb(96, 96, 96) var(--volume),
     rgb(96, 96, 96)  50%
   );
 }
@@ -1371,7 +1375,9 @@ label:hover{
 .volumes-regulador:hover::-webkit-slider-runnable-track{
     background: linear-gradient(
     to right,
-    rgb(29, 185, 84) 50%,
+    rgb(29, 185, 84) 0%,
+    rgb(29, 185, 84) var(--volume),
+    rgb(96, 96, 96) var(--volume),
     rgb(96, 96, 96) 50%
   );
 }
@@ -1389,7 +1395,9 @@ label:hover{
 
 .volumes-regulador:hover::-webkit-slider-thumb{
     opacity: 1;
-}  
+}
+
+
 
 .right-icons{
     width: 15px;
