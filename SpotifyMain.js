@@ -60,3 +60,17 @@ volume.addEventListener('input', () => {
     const volumePercent = volume.value * 100;
     volume.style.setProperty('--volume', `${volumePercent}%`);
 })
+
+volumeImg.addEventListener('click', () => {
+    if(audio.volume > 0){
+        audio.dataset.lastVolume = audio.volume;
+        audio.volume = 0;
+        volume.value = 0;
+        volume.style.setProperty('--volume', '0%');
+    }else{
+        const last = audio.dataset.lastVolume || 0.2;
+        audio.volume = last;
+        volume.value = last;
+        volume.style.setProperty('--volume', `${last * 100}%`)
+    }
+})
