@@ -102,6 +102,7 @@ function switchVolumeIcon(volumeValue){
 let currentTrackIndex = 0;
 
 const nextButton = document.querySelector(".controladorCima-next");
+const previuosButton = document.querySelector(".controladorCima-previous");
 
 function loadTrack(index){
     audio.src = playlist[index].src;
@@ -117,6 +118,21 @@ nextButton.addEventListener('click', () => {
 
     if(currentTrackIndex >= playlist.length){
         currentTrackIndex = 0;
+    }
+
+    loadTrack(currentTrackIndex);
+})
+
+previuosButton.addEventListener('click', () => {
+    if(audio.currentTime > 3){
+        audio.currentTime = 0;
+        return;
+    }
+
+    currentTrackIndex--;
+
+    if(currentTrackIndex < 0){
+        currentTrackIndex = playlist.length - 1;
     }
 
     loadTrack(currentTrackIndex);
