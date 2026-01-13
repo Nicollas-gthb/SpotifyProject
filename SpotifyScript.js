@@ -1,3 +1,5 @@
+import { playlist } from "./SpotifyPlaylist";
+
 const audio = document.querySelector(".audio-player");
 
 const playPauseButton = document.querySelector(".controladorCima-circulo");
@@ -94,4 +96,16 @@ function switchVolumeIcon(volumeValue){
     }else{
         volumeImg.src = volumeMute;
     }
+}
+
+
+let currentTrackIndex = 0;
+
+function loadTrack(index){
+    audio.src = playlist[index].src;
+    audio.load();
+
+    audio.play();
+    playPause.src = pauseIcon;
+    playPause.style.marginLeft = "0px";
 }
