@@ -996,6 +996,7 @@ label:hover{
     margin-right: 10px;
 }
 
+/*
 .opcoes-circulocriar{
     background-color: rgb(33, 33, 33);
     height: 14px;
@@ -1005,22 +1006,28 @@ label:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 50%;
+    opacity: 0;
 }
 
 .opcoes-circulocriar:hover{
     background-color: rgb(50, 50, 50);
     cursor: pointer;
     scale: 1.05;
-    opacity: 100%;
+    opacity: 0;
+}*/
+
+.opcoes-circulocriar{
+    width: 18px;
+    height: 17px;
+    cursor: pointer;
 }
 
 .opcoes-criar{
-    width: 15px;
-    height: 15px;
+    width: 100%;
+    height: 100%;
     opacity: 70%;
 }
-.opcoes-circulocriar:hover .opcoes-criar{
+.opcoes-criar:hover{
     scale: 1.05;
     opacity: 100%;
 }
@@ -1204,6 +1211,8 @@ label:hover{
     color: rgb(255, 255, 255);
 }
 
+
+/*
 .resumo-circulocriar{
     background-color: rgb(33, 33, 33);
     height: 14px;
@@ -1221,15 +1230,21 @@ label:hover{
     cursor: pointer;
     scale: 1.05;
     opacity: 100%;
+}*/
+
+.resumo-circulocriar{
+    width: 18px;
+    height: 17px;
+    cursor: pointer;
 }
 
 .resumo-criar{
-    width: 15px;
-    height: 15px;
+    width: 100%;
+    height: 100%;
     opacity: 70%;
 }
 
-.resumo-circulocriar:hover .resumo-criar{
+.resumo-criar:hover{
     scale: 1.05;
     opacity: 100%;
 }

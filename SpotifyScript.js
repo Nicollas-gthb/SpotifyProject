@@ -34,10 +34,16 @@ const nomeMusica = document.querySelector("#player-name");
 const nomeArtista = document.querySelector("#player-artist");
 const imgMusica = document.querySelector("#resumo-imgContent");
 
-
 const nomeMusicaRight = document.querySelector("#nomes-nomeMusica");
 const nomeArtistaRight = document.querySelector("#nomes-autor");
 const imgMusicaRight = document.querySelector("#rightside-img");
+
+//adicionar
+const addButtonRight = document.querySelector("#addButtonRight");
+const addButtonPlayer = document.querySelector("#addButtonPlayer");
+const addIcon = "icons/add-icon.svg"
+const addCheckIcon = "icons/addCheck-icon.svg";
+
 
 //botão play pause
 playPauseButton.addEventListener('click', () => {
@@ -141,7 +147,15 @@ function loadTrack(index){
     nomeMusicaRight.textContent = playlist[index].name;
     nomeArtistaRight.textContent = playlist[index].artist;
     imgMusicaRight.src = playlist[index].imgSrc;
-    
+
+    if(playlist[index].isCheck){
+        addButtonPlayer.src = addCheckIcon;
+        addButtonRight.src = addCheckIcon;
+    }else{
+        addButtonPlayer.src = addIcon;
+        addButtonRight.src = addIcon;    
+    }
+
     audio.play();
     playPause.src = pauseIcon;
     playPause.style.marginLeft = "0px";
@@ -180,4 +194,28 @@ audio.addEventListener('ended', () => {
     }
 
     loadTrack(currentTrackIndex);
+})
+
+
+//adicionar
+function swicthAdd(){
+    if(playlist[currentTrackIndex].isCheck){
+        addButtonPlayer.src = addIcon;
+        addButtonRight.src = addIcon;
+
+        playlist[currentTrackIndex].isCheck = false;
+    }else{
+        addButtonPlayer.src = addCheckIcon;
+        addButtonRight.src = addCheckIcon;
+
+        playlist[currentTrackIndex].isCheck = true;
+    }
+}
+
+addButtonPlayer.addEventListener('click', () =>{
+    swicthAdd();
+})
+
+addButtonRight.addEventListener('click', () =>{
+    swicthAdd();
 })

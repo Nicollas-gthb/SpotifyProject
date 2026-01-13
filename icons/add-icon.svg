@@ -1,7 +1,5 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="1.8719999999999999">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffffCCCCCC" stroke-width="0.288"/>
-<g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z" fill="#ffffff"/> </g>
-</svg>
+<svg width="535" height="531" viewBox="0 0 535 531" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="242" y="153" width="50" height="225" fill="white"/>
+<rect x="155" y="291" width="50" height="225" transform="rotate(-90 155 291)" fill="white"/>
+<path d="M535 265.5C535 412.132 415.236 531 267.5 531C119.764 531 0 412.132 0 265.5C0 118.868 119.764 0 267.5 0C415.236 0 535 118.868 535 265.5ZM60.8039 265.5C60.8039 378.802 153.345 470.651 267.5 470.651C381.655 470.651 474.196 378.802 474.196 265.5C474.196 152.198 381.655 60.3493 267.5 60.3493C153.345 60.3493 60.8039 152.198 60.8039 265.5Z" fill="white"/>
+</svg>
