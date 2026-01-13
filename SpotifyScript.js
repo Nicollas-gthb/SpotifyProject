@@ -32,8 +32,12 @@ const previuosButton = document.querySelector(".controladorCima-previous");
 
 const nomeMusica = document.querySelector("#player-name");
 const nomeArtista = document.querySelector("#player-artist");
-const imgMusica = document.querySelector(".resumo-imgContent");
+const imgMusica = document.querySelector("#resumo-imgContent");
 
+
+const nomeMusicaRight = document.querySelector("#nomes-nomeMusica");
+const nomeArtistaRight = document.querySelector("#nomes-autor");
+const imgMusicaRight = document.querySelector("#rightside-img");
 
 //botão play pause
 playPauseButton.addEventListener('click', () => {
@@ -122,6 +126,10 @@ nomeMusica.textContent = playlist[0].name;
 nomeArtista.textContent = playlist[0].artist;
 imgMusica.src = playlist[0].imgSrc;
 
+nomeMusicaRight.textContent = playlist[0].name;
+nomeArtistaRight.textContent = playlist[0].artist;
+imgMusicaRight.src = playlist[0].imgSrc;
+
 function loadTrack(index){
     audio.src = playlist[index].src;
     audio.load();
@@ -129,6 +137,10 @@ function loadTrack(index){
     nomeMusica.textContent = playlist[index].name;
     nomeArtista.textContent = playlist[index].artist;
     imgMusica.src = playlist[index].imgSrc;
+
+    nomeMusicaRight.textContent = playlist[index].name;
+    nomeArtistaRight.textContent = playlist[index].artist;
+    imgMusicaRight.src = playlist[index].imgSrc;
     
     audio.play();
     playPause.src = pauseIcon;
