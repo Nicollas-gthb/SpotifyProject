@@ -1,18 +1,21 @@
-import { playlist } from "./SpotifyPlaylist";
+import { playlist } from "./SpotifyPlaylist.js";
 
 const audio = document.querySelector(".audio-player");
 
+//variaveis do botão play pause
 const playPauseButton = document.querySelector(".controladorCima-circulo");
 const playPause = document.querySelector(".controladorCima-play");
 
 const playIcon = "icons/playbutton.svg";
 const pauseIcon = "icons/pause-icon.svg";
 
+//variaveis do progresso
 const progressRange = document.querySelector(".controladorBaixo-progresso");
 
 const currentTime = document.querySelector(".controladorBaixo-inicio");
 const totalTime = document.querySelector(".controladorBaixo-fim");
 
+//variaveis do volume
 const volume = document.querySelector(".volumes-regulador");
 const volumeImg = document.querySelector(".volumes-volumeIcon");
 
@@ -21,7 +24,14 @@ const volumeMin = "icons/volumeMin-icon.svg";
 const volumeMid = "icons/volumeMid-icon.svg";
 const volumeMax = "icons/volumeMax-icon.svg";
 
+//variaveis da playlist
+let currentTrackIndex = 0;
 
+const nextButton = document.querySelector(".controladorCima-next");
+const previuosButton = document.querySelector(".controladorCima-previous");
+
+
+//botão play pause
 playPauseButton.addEventListener('click', () => {
     if(audio.paused){
         audio.play();
@@ -41,6 +51,8 @@ function formatTime(seconds){
     return `${min}:${sec < 10 ? '0' : ''}${sec}`;
 }
 
+
+//progresso
 audio.addEventListener('loadedmetadata', () => {
     progressRange.max = audio.duration;
     totalTime.textContent = formatTime(audio.duration);
@@ -58,6 +70,8 @@ progressRange.addEventListener('input', () => {
     audio.currentTime = progressRange.value;
 })
 
+
+//volume
 audio.volume = volume.value;
 volume.style.setProperty('--volume', `${volume.value * 100}%`);
 
@@ -99,11 +113,7 @@ function switchVolumeIcon(volumeValue){
 }
 
 
-let currentTrackIndex = 0;
-
-const nextButton = document.querySelector(".controladorCima-next");
-const previuosButton = document.querySelector(".controladorCima-previous");
-
+//playlist
 function loadTrack(index){
     audio.src = playlist[index].src;
     audio.load();
@@ -133,6 +143,16 @@ previuosButton.addEventListener('click', () => {
 
     if(currentTrackIndex < 0){
         currentTrackIndex = playlist.length - 1;
+    }
+
+    loadTrack(currentTrackIndex);
+})
+
+audio.addEventListener('ended', () => {
+    currentTrackIndex++;
+
+    if(currentTrackIndex >= playlist.length){
+        currentTrackIndex = 0;
     }
 
     loadTrack(currentTrackIndex);

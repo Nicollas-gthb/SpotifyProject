@@ -1291,6 +1291,8 @@ label:hover{
     height: 5px;
     width: 450px;
     cursor: pointer;
+
+    -progress: 0%;
 }
 
 .controladorBaixo-progresso::-webkit-slider-runnable-track{
