@@ -791,6 +791,11 @@ label:hover{
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.titulos-maior:hover{
+    text-decoration: underline;
 }
 
 .opcoesPrincipais-wrapper{
