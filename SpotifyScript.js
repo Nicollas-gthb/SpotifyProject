@@ -170,8 +170,8 @@ function loadTrack(index){
     resumoOuvintes.textContent = `${about.listeners} ouvintes mensais`;
     resumoSobre.textContent = about.bio;
     
-    switchAdd();
-    switchFollow();
+    switchAddUI();
+    switchFollowUI();
 
     audio.play();
     playPause.src = pauseIcon;
@@ -215,46 +215,45 @@ audio.addEventListener('ended', () => {
 
 
 //adicionar
-function switchAdd(){
-    if(playlist[currentTrackIndex].isCheck){
+function switchAddUI(){
+    const { music } = playlist[currentTrackIndex];
 
-        addButtonPlayer.src = addIcon;
-        addButtonRight.src = addIcon;
+    const icon = music.isCheck ? addCheckIcon : addIcon;
 
-        playlist[currentTrackIndex].isCheck = false;
-    }else{
-
-        addButtonPlayer.src = addCheckIcon;
-        addButtonRight.src = addCheckIcon;
-
-        playlist[currentTrackIndex].isCheck = true;
-    }
+    addButtonPlayer.src = icon;
+    addButtonRight.src = icon;
 }
 
-addButtonPlayer.addEventListener('click', () =>{
-    switchAdd();
-})
+function toggleAdd(){
+    const { music } = playlist[currentTrackIndex];
 
-addButtonRight.addEventListener('click', () =>{
-    switchAdd();
-})
+    music.isCheck = !music.isCheck;
+    switchAddUI();
+}
+
+addButtonPlayer.addEventListener('click', toggleAdd);
+
+addButtonRight.addEventListener('click', toggleAdd);
 
 
 //seguir
-function switchFollow(){
-    if(playlist[currentTrackIndex].about.isFollowing){
-        
+function switchFollowUI(){
+    const { about } = playlist[currentTrackIndex];
+
+    if(about.isFollowing){
         followButton.textContent = deixarDeSeguir;
-        playlist[currentTrackIndex].about.isFollowing = false;
         followButton.style.width = "138px";
     }else{
-        
         followButton.textContent = seguir;
-        playlist[currentTrackIndex].about.isFollowing = true;
         followButton.style.width = "78px";
     }
 }
 
-followButton.addEventListener('click', () => {
-    switchFollow();
-})
+function toggleFollow(){
+    const { about } = playlist[currentTrackIndex];
+
+    about.isFollowing = !about.isFollowing;
+    switchFollowUI();
+}
+
+followButton.addEventListener('click', toggleFollow);
