@@ -1054,7 +1054,10 @@ label:hover{
 }
 
 .resumo-parteCima{
-    background: url(images/Linkin-Park.jpg) 80% / cover no-repeat;
+    background-image: url(images/Linkin-Park.jpg);
+    background-position: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 92%;
     height: 210px;
     border-radius: 10px 10px 0 0;
@@ -1097,9 +1100,10 @@ label:hover{
     border: 2px solid rgb(102, 102, 102);
     border-radius: 18px;
     
-    height: 28px;
-    width: 138px;
-    margin-right: 5px;
+    height: 33px;
+    width: 138px;/* 138px e 78px */
+    margin-left: auto;
+    margin-right: 10px;
 
     font-size: 13px;
     font-weight: bold;

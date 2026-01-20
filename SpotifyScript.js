@@ -44,6 +44,15 @@ const addButtonPlayer = document.querySelector("#addButtonPlayer");
 const addIcon = "icons/add-icon.svg"
 const addCheckIcon = "icons/addCheck-icon.svg";
 
+//resumo
+const resumoArtista = document.querySelector("#resumo-artista");
+const resumoOuvintes = document.querySelector("#ouvintes");
+const resumoSobre = document.querySelector("#sobre");
+const resumoImagem = document.querySelector("#resumo-img");
+const followButton = document.querySelector("#seguindo-button");
+
+const deixarDeSeguir = "Deixar de seguir";
+const seguir = "Seguir";
 
 //botão play pause
 playPauseButton.addEventListener('click', () => {
@@ -128,33 +137,41 @@ function switchVolumeIcon(volumeValue){
 
 
 //playlist
-nomeMusica.textContent = playlist[0].name;
-nomeArtista.textContent = playlist[0].artist;
-imgMusica.src = playlist[0].imgSrc;
+nomeMusica.textContent = playlist[0].music.name;
+nomeArtista.textContent = playlist[0].music.artist;
+imgMusica.src = playlist[0].music.imgSrc;
 
-nomeMusicaRight.textContent = playlist[0].name;
-nomeArtistaRight.textContent = playlist[0].artist;
-imgMusicaRight.src = playlist[0].imgSrc;
+nomeMusicaRight.textContent = playlist[0].music.name;
+nomeArtistaRight.textContent = playlist[0].music.artist;
+imgMusicaRight.src = playlist[0].music.imgSrc;
+
+resumoArtista.textContent = playlist[0].music.artist;
+resumoImagem.style.backgroundImage = `url(${playlist[0].about.imgSrc})`;
+resumoOuvintes.textContent = `${playlist[0].about.listeners} ouvintes mensais`;
+resumoSobre.textContent = playlist[0].about.bio;
+
 
 function loadTrack(index){
-    audio.src = playlist[index].src;
+    const { music, about } = playlist[index];
+
+    audio.src = music.src;
     audio.load();
 
-    nomeMusica.textContent = playlist[index].name;
-    nomeArtista.textContent = playlist[index].artist;
-    imgMusica.src = playlist[index].imgSrc;
+    nomeMusica.textContent = music.name;
+    nomeArtista.textContent = music.artist;
+    imgMusica.src = music.imgSrc;
 
-    nomeMusicaRight.textContent = playlist[index].name;
-    nomeArtistaRight.textContent = playlist[index].artist;
-    imgMusicaRight.src = playlist[index].imgSrc;
+    nomeMusicaRight.textContent = music.name;
+    nomeArtistaRight.textContent = music.artist;
+    imgMusicaRight.src = music.imgSrc;
 
-    if(playlist[index].isCheck){
-        addButtonPlayer.src = addCheckIcon;
-        addButtonRight.src = addCheckIcon;
-    }else{
-        addButtonPlayer.src = addIcon;
-        addButtonRight.src = addIcon;    
-    }
+    resumoArtista.textContent = music.artist;
+    resumoImagem.style.backgroundImage = `url(${about.imgSrc})`;
+    resumoOuvintes.textContent = `${about.listeners} ouvintes mensais`;
+    resumoSobre.textContent = about.bio;
+    
+    switchAdd();
+    switchFollow();
 
     audio.play();
     playPause.src = pauseIcon;
@@ -198,13 +215,15 @@ audio.addEventListener('ended', () => {
 
 
 //adicionar
-function swicthAdd(){
+function switchAdd(){
     if(playlist[currentTrackIndex].isCheck){
+
         addButtonPlayer.src = addIcon;
         addButtonRight.src = addIcon;
 
         playlist[currentTrackIndex].isCheck = false;
     }else{
+
         addButtonPlayer.src = addCheckIcon;
         addButtonRight.src = addCheckIcon;
 
@@ -213,9 +232,29 @@ function swicthAdd(){
 }
 
 addButtonPlayer.addEventListener('click', () =>{
-    swicthAdd();
+    switchAdd();
 })
 
 addButtonRight.addEventListener('click', () =>{
-    swicthAdd();
+    switchAdd();
+})
+
+
+//seguir
+function switchFollow(){
+    if(playlist[currentTrackIndex].about.isFollowing){
+        
+        followButton.textContent = deixarDeSeguir;
+        playlist[currentTrackIndex].about.isFollowing = false;
+        followButton.style.width = "138px";
+    }else{
+        
+        followButton.textContent = seguir;
+        playlist[currentTrackIndex].about.isFollowing = true;
+        followButton.style.width = "78px";
+    }
+}
+
+followButton.addEventListener('click', () => {
+    switchFollow();
 })
